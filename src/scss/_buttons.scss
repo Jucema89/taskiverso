@@ -1,0 +1,562 @@
+@import 'variables';
+
+:host {
+
+  %btn {
+    display: flex;
+    flex-direction: row;
+    padding: 0.5rem 1rem;
+    border: transparent;
+    align-items: center;
+    justify-content: flex-start;
+    width: -moz-fit-content;
+    width: fit-content;
+    gap: 0.5rem;
+    flex-wrap: nowrap;
+    cursor: pointer;
+    filter: drop-shadow(0 0.25rem 0.25rem rgba(0,0,0,.1));
+    transition: .3s;
+  }
+
+  %btnIcon {
+    display: flex;
+    flex-direction: column;
+    border: transparent;
+    background: transparent;
+    cursor: pointer;
+    filter: drop-shadow(0 0.25rem 0.25rem rgba(0, 0, 0, 0.1));
+    transition: 0.3s;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+  }
+
+  //variant %buttons
+  %btn_small {
+    @extend %btn;
+    height: 1.875rem; //30px
+    border-radius: 0.563rem; //9px
+
+    mat-icon {
+      width: .5rem;
+    }
+  }
+
+  %btn_medium {
+    @extend %btn;
+    height: 2.5rem; //40px
+    border-radius: 0.688rem; //11px
+
+    mat-icon {
+      width: 1rem;
+    }
+  }
+
+  %btn_big {
+    @extend %btn;
+    height: 3.125rem; //50px
+    border-radius: 0.938rem; //15px
+
+    mat-icon {
+      width: 1.25rem;
+      height: 1.25rem;
+    }
+  }
+
+  //variants %icons
+  %btn_small_icon {
+    @extend %btnIcon;
+    height: 1.875rem; //30px
+    width: 1.875rem; //30px
+    border-radius: 0.563rem; //9px
+
+    mat-icon {
+      width: .5rem;
+    }
+
+  }
+
+  %btn_medium_icon {
+    @extend %btnIcon;
+    height: 2.5rem; //40px
+    width: 2.5rem; //40px
+    border-radius: 0.688rem; //11px
+
+    mat-icon {
+      width: 1rem;
+    }
+
+  }
+
+  %btn_big_icon {
+    @extend %btnIcon;
+    height: 3.125rem; //50px
+    width: 3.125rem; //50px
+    border-radius: 0.938rem; //15px
+
+    mat-icon {
+      width: 1.5rem;
+    }
+  }
+
+
+  //buttons normals
+  .btn_basic {
+    @extend %btn_medium;
+    background-color: white;
+
+    &_icon {
+      color: $primary;
+
+      mat-icon {
+        width: 1.125rem;
+        height: auto;
+      }
+    }
+
+    &_text {
+      color: black;
+      font-size: 1rem;
+      font-weight: 500;
+    }
+  }
+
+  .btn_primary {
+    @extend %btn_medium;
+    background-color: $primary;
+
+    &_icon {
+      color: white;
+
+      mat-icon {
+        width: .8rem;
+        height: auto;
+      }
+    }
+
+    &_text {
+      color: white;
+      font-size: 1rem;
+      font-weight: 500;
+    }
+  }
+
+  .btn_primary_login {
+    @extend %btn_medium;
+    border-radius: .5rem;
+    background-color: $primary;
+
+    &_icon {
+      color: $success-color;
+
+      mat-icon {
+        width: 1.125rem;
+        height: auto;
+      }
+    }
+
+    &_text {
+      color: white;
+      font-size: 1rem;
+      font-weight: 500;
+    }
+
+  }
+
+  .btn_success {
+    @extend %btn_medium;
+    background-color: $success-color;
+
+    &_icon {
+      color: white;
+
+      mat-icon {
+        width: 1.125rem;
+        height: auto;
+      }
+    }
+
+    &_text {
+      color: white;
+      font-size: 1rem;
+      font-weight: 500;
+    }
+  }
+
+
+  .btn_danger {
+    @extend %btn_medium;
+    background-color: $danger-color;
+
+    &_icon {
+      color: white;
+
+      mat-icon {
+        width: 1.125rem;
+        height: auto;
+      }
+    }
+
+    &_text {
+      color: white;
+      font-size: 1rem;
+      font-weight: 500;
+    }
+  }
+
+  .btn_empty_state {
+    @extend %btn_medium;
+    background-color: $primary-light;
+
+    &_icon {
+      color: $primary;
+
+      mat-icon {
+        width: 1.125rem;
+        height: auto;
+      }
+    }
+
+    &_text {
+      color: $primary;
+      font-size: 1rem;
+      font-weight: 500;
+    }
+  }
+
+  //buttons BIGS
+  .btn_basic_big {
+    @extend %btn_big;
+    background-color: white;
+
+    &_icon {
+      color: $primary;
+
+      mat-icon {
+        width: 1.25rem;
+        height: auto;
+      }
+    }
+
+    &_text {
+      color: black;
+      font-size: 1.25rem;
+      font-weight: 500;
+    }
+  }
+
+  .btn_primary_big {
+    @extend %btn_big;
+    background-color: $primary;
+
+    &_icon {
+      color: white;
+
+      mat-icon {
+        width: 1.25rem;
+        height: auto;
+      }
+    }
+
+    &_text {
+      color: white;
+      font-size: 1.25rem;
+      font-weight: 500;
+    }
+  }
+
+  .btn_success_big {
+    @extend %btn_big;
+    background-color: $success-color;
+
+    &_icon {
+      color: white;
+
+      mat-icon {
+        width: 1.25rem;
+        height: auto;
+      }
+    }
+
+    &_text {
+      color: white;
+      font-size: 1.25rem;
+      font-weight: 500;
+    }
+  }
+
+
+  .btn_danger_big {
+    @extend %btn_big;
+    background-color: $danger-color;
+
+    &_icon {
+      color: white;
+
+      mat-icon {
+        width: 1.25rem;
+        height: auto;
+      }
+    }
+
+    &_text {
+      color: white;
+      font-size: 1.25rem;
+      font-weight: 500;
+    }
+  }
+
+  //buttons icons Normal
+  .btn_icon_primary {
+    @extend %btn_medium_icon;
+    background-color: $primary;
+    color: $white;
+  }
+
+  .btn_icon_basic {
+    @extend %btn_medium_icon;
+    background-color: $white;
+    color: $primary;
+  }
+
+  .btn_icon_success {
+    @extend %btn_medium_icon;
+    background-color: $success-color;
+    color: $white;
+  }
+
+  .btn_icon_danger {
+    @extend %btn_medium_icon;
+    background-color: $danger-color;
+    color: $white;
+  }
+
+  //buttons icons Big
+  .btn_icon_big_primary {
+    @extend %btn_big_icon;
+    background-color: $primary;
+    color: $white;
+  }
+
+  .btn_icon_big_basic {
+    @extend %btn_big_icon;
+    background-color: $white;
+    color: $primary;
+  }
+
+  .btn_icon_big_success {
+    @extend %btn_big_icon;
+    background-color: $success-color;
+    color: $white;
+  }
+
+  .btn_icon_big_danger {
+    @extend %btn_big_icon;
+    background-color: $danger-color;
+    color: $white;
+  }
+
+  //buttons small
+  .btn_small_primary {
+    @extend %btn_small;
+    background-color: $primary;
+    color: $white;
+  }
+
+  .btn_small_basic {
+    @extend %btn_small;
+    background-color: $white;
+    color: $primary;
+  }
+
+  .btn_small_success {
+    @extend %btn_small;
+    background-color: $success-color;
+    color: $white;
+  }
+
+  .btn_small_danger {
+    @extend %btn_small;
+    background-color: $danger-color;
+    color: $white;
+  }
+
+  //buttons icons small
+  .btn_icon_small_primary {
+    @extend %btn_small_icon;
+    background-color: $primary;
+    color: $white;
+  }
+
+  .btn_icon_small_basic {
+    @extend %btn_small_icon;
+    background-color: $white;
+    color: $primary;
+  }
+
+  .btn_icon_small_success {
+    @extend %btn_small_icon;
+    background-color: $success-color;
+    color: $white;
+  }
+
+  .btn_icon_small_danger {
+    @extend %btn_small_icon;
+    background-color: $danger-color;
+    color: $white;
+  }
+
+
+  //hover-buttons
+
+  .btn_basic:hover {
+    background-color: $gray;
+    border: 3px solid $primary
+  }
+
+  .btn_primary:hover {
+    background-color: $primary-light;
+
+    .btn_primary_text,
+    .btn_primary_icon {
+      color: $primary;
+    }
+  }
+
+  .btn_primary_login:hover {
+    background-color: $primary-light;
+
+    .btn_primary_login_text,
+    .btn_primary_login_icon {
+      color: $primary;
+    }
+  }
+
+  .btn_success:hover {
+    background-color: $success-light-color;
+
+    .btn_success_text,
+    .btn_success_icon {
+      color: $success-color;
+    }
+  }
+
+  .btn_danger:hover {
+    background-color: $danger-light-color;
+
+    .btn_danger_text,
+    .btn_danger_icon {
+      color: $danger-color;
+    }
+  }
+
+  .btn_empty_state:hover {
+    background-color: $primary;
+
+    .btn_empty_state_text,
+    .btn_empty_state_icon {
+      color: white;
+    }
+  }
+
+  .btn_danger_active {
+    background-color: $danger-light-color;
+
+    .btn_success_text,
+    .btn_success_icon {
+      color: $danger-color;
+    }
+  }
+
+  //hover buttons-icons
+  .btn_icon_primary:hover {
+    background-color: $primary-light;
+
+    mat-icon {
+      color: $primary;
+    }
+  }
+
+  .btn_icon_primary_active {
+    background-color: $primary-light;
+
+    mat-icon {
+      color: $primary;
+    }
+  }
+
+  .btn_icon_success:hover {
+    background-color: $success-light-color;
+
+    mat-icon {
+      color: $success-color;
+    }
+  }
+
+  .btn_icon_success_active {
+    background-color: $success-light-color;
+
+    mat-icon {
+      color: $success-color;
+    }
+  }
+
+  .btn_icon_danger:hover {
+    background-color: $danger-light-color;
+
+    mat-icon {
+      color: $danger-color;
+    }
+  }
+
+  .btn_icon_tools:hover {
+    background-color: white;
+    border-radius: 50%;
+    border: 2px solid $primary;
+    padding: 1rem;
+  }
+
+  .btn_icon_tools_delete:hover {
+    background-color: white;
+    border-radius: 50%;
+    border: 2px solid $danger-color;
+    padding: 1rem;
+    color: $danger-color;
+  }
+
+  //disabled button normal
+  .btn_basic[disabled],
+  .btn_primary[disabled],
+  .btn_primary_login[disabled],
+  .btn_success[disabled],
+  .btn_danger[disabled] {
+    background-color: $disabled-background  !important;
+    cursor: none;
+    pointer-events: none!important;
+
+    .btn_primary_text,
+    .btn_primary_icon,
+    .btn_primary_login_text,
+    .btn_primary_login_icon,
+    .btn_success_text,
+    .btn_success_icon,
+    .btn_danger_text,
+    .btn_danger_icon {
+      color: $disabled-color!important
+    }
+
+  }
+
+  //disabled button icons
+  .btn_icon_primary[disabled],
+  .btn_icon_success[disabled],
+  .btn_icon_danger[disabled] {
+    background-color: $disabled-background  !important;
+    cursor: none;
+    pointer-events: none!important;
+
+    mat-icon {
+      color: $disabled-color!important
+    }
+  }
+}

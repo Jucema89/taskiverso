@@ -24,6 +24,23 @@
       "dom"
     ]
   },
+  "paths": {
+    "@app/*": [
+      "./src/app/*"
+    ],
+    "@shared/*": [
+      "./src/app/shared*"
+    ],
+    "@contact/*": [
+      "./src/app/contact*"
+    ],
+    "@home/*": [
+      "./src/app/home*"
+    ],
+    "@skills/*": [
+      "./src/app/skills*"
+    ],
+  },
   "angularCompilerOptions": {
     "enableI18nLegacyMessageIdFormat": false,
     "strictInjectionParameters": true,

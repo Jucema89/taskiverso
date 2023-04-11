@@ -1,0 +1,29 @@
+<ng-container *ngIf="iconDir === 'der' else iconIzq">
+    <button 
+    [disabled]="disabling || disableForClone" [class]="clase" [id]="idButton" 
+    (click)="!disabling ? onEmit(): ''">
+        <div *ngIf="text" [class]="clase + '_text'" [style]="text.length > 15 ? 'font-size: 1rem': ''">
+            {{text}}
+        </div>
+
+        <div *ngIf="icon" [class]="clase + '_icon'">
+            <mat-icon [svgIcon]="icon"></mat-icon>
+        </div>
+    </button>
+</ng-container>
+
+<ng-template #iconIzq>
+    <button 
+        [disabled]="disabling || disableForClone" 
+        [class]="clase" [id]="idButton" 
+        (click)="!disabling ? onEmit(): ''">
+        <div *ngIf="icon" [class]="clase +  '_icon'">
+            <mat-icon [svgIcon]="icon"></mat-icon>
+        </div>
+
+        <div *ngIf="text" [class]="clase + '_text'" [style]="text.length > 15 ? 'font-size: 1rem': ''">
+            {{text}}
+        </div>
+
+    </button>
+</ng-template>

@@ -1,0 +1,82 @@
+@import 'variables';
+
+@media (min-width: 64em){}
+
+// 640px, 1024px, 1400px
+$breakpoints-up: ("medium": "40em", "large": "64em", "xlarge": "87.5em");
+
+// 639px, 1023px, 1399px
+$breakpoints-down: ("small": "39.9375", "medium": "63.9975em", "large": "87.4375em");
+
+@mixin breakpoint-up($size) {
+    @media (min-width: map-get($breakpoints-up, $size)){
+        @content;
+    }
+}
+
+@mixin breakpoint-down($size) {
+    @media (max-width: map-get($breakpoints-down, $size)) {
+        @content;
+    }
+}
+
+@mixin scroll-renta($axisX, $axisY, $color) {
+  scroll-behavior:smooth;
+  overflow-y: $axisX;
+  overflow-x: $axisY;
+
+  //firfox scroll
+  scrollbar-color: $color $primary-light;
+  scrollbar-width: thin;
+
+  //chrome
+  &::-webkit-scrollbar-track {
+    border-radius: 20px;
+    background-color: $primary-light;
+
+  }
+
+  &::-webkit-scrollbar {
+    background-color: $primary-light;
+    width: 0.375rem;
+    height: 0.375rem;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    border-radius: 20px;
+    width: 3px;
+    background-color: $color;
+  }
+
+}
+
+
+@mixin scroller($axisX, $axisY, $color, $track_size) {
+  scroll-behavior:smooth;
+  overflow-y: $axisX!important;
+  overflow-x: $axisY!important;
+
+  //firfox scroll
+  scrollbar-color: $color $primary-light!important;
+  scrollbar-width: thin;
+
+  //chrome
+  &::-webkit-scrollbar-track {
+    border-radius: 20px;
+    background-color: $primary-light!important;
+
+  }
+
+  &::-webkit-scrollbar {
+    background-color: $primary-light!important;
+    width: $track_size!important;
+    height: $track_size!important;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    border-radius: 20px;
+    width: $track_size!important;
+    background-color: $color!important;
+  }
+
+}
