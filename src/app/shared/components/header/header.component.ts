@@ -11,23 +11,18 @@ export class HeaderComponent {
 
   buttons: ButtonHeader[] = [
     {
-      name: 'Home',
+      name: 'Add Task',
       id: '0',
       route: '/home',
-      icon: 'home'
+      icon: 'file-add'
     },
     {
-      name: 'Skill',
-      id: '1',
-      route: '/skills',
-      icon: 'skill'
+      name: 'Add Step',
+      id: '0',
+      route: '/home',
+      icon: 'add-step'
     },
-    {
-      name: 'About',
-      id: '2',
-      route: '/about',
-      icon: 'about'
-    },
+    
   ];
 
 }
