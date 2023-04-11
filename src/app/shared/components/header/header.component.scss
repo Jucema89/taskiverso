@@ -1,0 +1,20 @@
+.header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: nowrap;
+    
+    &_logo {
+        height: 60px;
+        width: auto;
+        max-width: 150px;
+    }
+
+    &_buttons {
+        display: flex;
+        justify-items: stretch;
+        gap: 1rem;
+        flex-wrap: nowrap;
+    }
+}

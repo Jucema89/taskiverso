@@ -1,1 +1,11 @@
-<p>header works!</p>
+<section class="header">
+    <img class="header_logo">
+    <div class="header_buttons">
+        <app-button *ngFor="let btn of buttons" 
+            [icon]="btn.icon"
+            [text]="btn.name"
+            [idButton]="btn.id"
+            [class]="'btn_basic'">
+        </app-button>
+    </div>
+</section>

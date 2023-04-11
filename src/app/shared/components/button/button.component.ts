@@ -27,7 +27,7 @@ export class ButtonComponent {
   /**
    * string con la clase css del boton.
    */
-  @Input() clase:
+  @Input() class:
     'btn_basic' |
     'btn_primary' |
     'btn_success' |

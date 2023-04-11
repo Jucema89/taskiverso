@@ -15,6 +15,7 @@ import { LayoutComponent } from './layout/layout.component';
   imports: [
     CommonModule,
     RouterModule,
+    ...MATERIAL_ELEMENTS,
   ],
   exports: [
     ...MATERIAL_ELEMENTS,
