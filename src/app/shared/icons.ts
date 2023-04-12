@@ -1,6 +1,7 @@
 export const ICONS: string[] = [
     'add-step',
     'content-file',
+    'dashboard-layout-circle',
     'favorite-heart',
     'favorite-star',
     'file-add',

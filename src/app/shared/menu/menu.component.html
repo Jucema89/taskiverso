@@ -1,0 +1,26 @@
+<div *ngIf="showMe" class="nav">
+
+    <div class="home">
+        <!-- <app-menu-dropdown
+        [routeNow]="routeNow$"
+        [arrayMenu]="menuOption"
+        (clickRoute)="dispatchRoute($event)"
+        >
+        </app-menu-dropdown> -->
+    </div>
+    <div class="brand" [routerLink]="['/home']">
+        <img src="assets/img/taskiverso.png" alt="Taskiverso">
+    </div>
+
+    <div class="picture">
+        <ng-container *ngIf="image; else noImage">
+          <img [src]="image" (click)="this.sidenavProfile.emit('click')">
+        </ng-container>
+        <ng-template #noImage>
+          <div class="picture_icon" (click)="this.sidenavProfile.emit('click')">
+            <mat-icon svgIcon="dashboard-layout-circle"></mat-icon>
+          </div>
+        </ng-template>
+      </div>
+
+</div>

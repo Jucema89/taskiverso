@@ -1,12 +1,12 @@
-.board {
-  &__add {
-    margin: 1rem;
-  }
-  &__list {
+.table {
+  // &_add {
+  //   margin: 1rem;
+  // }
+  &_list {
     display: flex;
     overflow: hidden;
-    height: 70vh;
-    padding: 0 1em;
+    height: 100vh;
+    padding: 0;
   }
 }
 

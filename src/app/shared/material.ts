@@ -9,6 +9,7 @@ import { MatSelectModule } from '@angular/material/select';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material/core';
 import { MatDialogModule } from '@angular/material/dialog';
+import {MatSidenavModule} from '@angular/material/sidenav';
 
 //CDK
 import { DragDropModule } from '@angular/cdk/drag-drop';
@@ -33,4 +34,5 @@ export const MATERIAL_ELEMENTS = [
         TextFieldModule,
         MatDialogModule,
         PortalModule,
+        MatSidenavModule
 ]

@@ -1,0 +1,77 @@
+@import 'variables';
+
+:host {
+
+    overflow: hidden;
+    width: 100%;
+
+    .sidenav {
+        display: grid;
+        // grid-template-rows: 20% 40% 30% 10%;
+        grid-template-rows: 15% 35% 40% 10%;
+        justify-content: space-between;
+        height: 100%;
+        justify-items: stretch;
+        align-items: stretch;
+
+        // &_user {
+        //     margin-bottom: 2rem;
+        // }
+
+        &_actions {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            gap: 1rem;
+            margin-left: 1rem;
+        }
+
+        &_support {
+            &_title {
+                background-color: $primary-light;
+                color: $primary;
+                text-align: center;
+                font-size: 1.25rem;
+
+                p {
+                    margin: 0 !important;
+                    padding: 0 !important;
+                }
+            }
+
+            &_links {
+                display: flex;
+                flex-direction: column;
+                gap: 2rem;
+                align-items: center;
+                margin-top: 1rem;
+
+                a {
+                    color: $primary;
+                    font-size: 1rem;
+                    font-weight: 400;
+                    border-bottom: 2px solid $primary;
+                    font-weight: 500;
+                    cursor: pointer;
+                    text-decoration: none;
+                }
+
+                .indicators {
+                    text-align: center;
+                    margin: 0 2rem 0 2rem;
+                }
+
+            }
+
+        }
+
+        &_footer {
+            &_buttons {
+                display: flex;
+                flex-direction: row;
+                gap: 1rem;
+                justify-content: flex-start;
+            }
+        }
+    }
+}

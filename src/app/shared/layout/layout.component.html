@@ -1,6 +1,27 @@
 
-<section class="grid">
+<!-- <section class="grid">
     <app-header></app-header>
     <router-outlet></router-outlet>
     <app-footer></app-footer>
-</section>
+</section> -->
+
+
+<mat-drawer-container autosize>
+
+  <mat-drawer #drawer 
+    class="settings_sidenav"
+    mode="over" 
+    position="end"
+    hasBackdrop="true">
+      <app-menu-user
+        (offSidenav)="$event ? drawer.toggle(): ''">
+      </app-menu-user>
+  </mat-drawer>
+
+  <router-outlet></router-outlet>
+
+  <app-menu
+    (sidenavProfile)="$event === 'click' ? drawer.toggle(): ''">
+  </app-menu>
+
+</mat-drawer-container>

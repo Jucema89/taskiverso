@@ -20,11 +20,11 @@
     }
 
     &_tasks {
-        display: flex;
+        display: flex; 
         flex-direction: column;
         gap: .5rem;
         padding: 1rem 1.25rem;
-        max-height: 450px;
+        max-height: 80vh;
         overflow: scroll;
         @include scroll-special(scroll, hidden, $primary);
 
