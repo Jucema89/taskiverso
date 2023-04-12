@@ -4,6 +4,7 @@ export const ICONS: string[] = [
     'favorite-heart',
     'favorite-star',
     'file-add',
+    'file-check',
     'file-bookmark',
     'file-check',
     'file-delete',

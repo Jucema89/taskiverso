@@ -1,35 +1,70 @@
+@import 'variables';
+
 .task {
-	background: white;
-	border-radius: 5px;
-	box-shadow: 0.1em 0.1em 0.5em lightgrey;
-	color: #333;
 	display: flex;
-	flex-wrap: wrap;
-	margin: 0 0 6px 0;
-	padding: 6px 6px 2px 8px;
+	flex-direction: column;
+	background: #FFFFFF;
+	box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+	border-radius: 11px;
+	padding: 1rem;
+	width: 300px;
+	gap: 1rem;
+
+	&_header {
+		display: flex;
+		flex-direction: column;
+		flex-wrap: nowrap;
+
+		&_title {
+			display: flex;
+			flex-direction: row;
+			justify-content: space-between;
+			align-items: center;
+			align-content: center;
+			flex-wrap: nowrap;
+
+			
+			h2 {
+				font-weight: 700;
+			}
+
+			mat-icon {
+				background-color: $gray-light;
+				color: $black;
+				padding: .5rem;
+				border-radius: .3rem;
+			}
+		}
+
+		&_icons {
+			display: flex;
+			flex-direction: row;
+			justify-content: flex-start;
+			align-items: center;
+			flex-wrap: nowrap;
 	
-	&--urgent {
-		border-left: 5px solid salmon;
+			&_buttons {
+				display: flex;
+				flex-direction: row;
+				gap: 1rem;
+	
+				mat-icon {
+					background-color: $gray-light;
+					color: $black;
+					padding: 0.3rem;
+					border-radius: 0.5rem;
+					height: 1.2rem;
+					width: auto
+					
+				}
+			}
+		}
 	}
 
-	&--moderate {
-		border-left: 5px solid lightseagreen;
-	}
+	&_buttons {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-around;
 
-	&--low {
-		border-left: 5px solid lightgoldenrodyellow;
-	}
-
-	&__title {
-		flex: 1 1 40%;
-		font-weight: bold;
-		text-align: center;
-	}
-	&__icon {
-		flex: 1 1 20%;
-		text-align: left;
-	}
-	&__date, &__description {
-		flex: 1 1 100%;
 	}
 }

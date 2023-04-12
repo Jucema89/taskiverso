@@ -1,5 +1,5 @@
 <main class="board" cdkDropListGroup>
-    <button
+    <!-- <button
       class="board__add"
       cdkOverlayOrigin
       (click)="displayOverlay()"
@@ -8,7 +8,7 @@
       color="primary"
     >
       Añadir Tarea
-    </button>
+    </button> -->
 
     <section class="board__list">
 
@@ -23,7 +23,6 @@
     <ng-template
         #connectedOverlay='cdkConnectedOverlay'
         cdkConnectedOverlay
-        [cdkConnectedOverlayOrigin]="trigger"
         [cdkConnectedOverlayOpen]="isOverlayDisplayed"
         [cdkConnectedOverlayHasBackdrop]="overlayOptions.hasBackdrop"
         [cdkConnectedOverlayPositions]="position"

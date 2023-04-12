@@ -1,19 +1,44 @@
-<div *ngIf="task"
-  class="task"
-  id="task_{{task.id}}"
-  >
-  <div class="task__icon">
-    <mat-icon aria-hidden="false" aria-label="urgent icon" *ngIf="task.priority > 0">alarm</mat-icon>
-    <mat-icon aria-hidden="false" aria-label="medium icon" *ngIf="task.priority > 1">autorenew</mat-icon>
-    <mat-icon aria-hidden="false" aria-label="medium icon" *ngIf="task.priority > 2">assignment_returned</mat-icon>
+<section class="task" *ngIf="task" id="task_{{task.id}}">
+
+  <div class="task_header">
+
+    <div class="task_header_title">
+      <h2>
+        {{task.name}}
+      </h2>
+      <mat-icon svgIcon="setting-menu-vertical">
+      </mat-icon>
+    </div>
+
+    <div class="task_header_icons">
+      <div class="task_header_icons_buttons">
+        <mat-icon svgIcon="setting-menu-vertical">
+        </mat-icon>
+        <mat-icon svgIcon="setting-menu-vertical">
+        </mat-icon>
+        <mat-icon svgIcon="setting-menu-vertical">
+        </mat-icon>
+      </div>
+    </div>
+
   </div>
-  <h3 class="task__title">Tarea</h3>
-  <button  matTooltip="Editar tarea" matTooltipClass="custom-tooltip-blue" matTooltipPosition="above" mat-icon-button (click)="handleEditTask(task)">
-    <mat-icon aria-label="icon-button to edit">edit</mat-icon>
-  </button>
-  <button  matTooltip="Eliminar tarea" matTooltipPosition="above" mat-icon-button (click)="removeTask(task.id)">
-    <mat-icon aria-label="icon-button to remove">delete</mat-icon>
-  </button>
-  <p class="task__date"><strong>Fecha de finalización:</strong> {{ task.date_limit| date }}</p>
-  <p class="task__description">{{task.description}}</p>
-</div>
+
+  
+
+  <div class="task_buttons">
+
+    <app-button
+      [icon]="'file-add'"
+      [text]="'Add Subtask'"
+      [class]="'btn_empty_state'">
+    </app-button>
+
+    <app-button
+      [icon]="'file-check'"
+      [text]="'Finish'"
+      [class]="'btn_success'">
+    </app-button>
+
+  </div>
+
+</section>

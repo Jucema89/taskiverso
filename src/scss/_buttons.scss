@@ -206,10 +206,10 @@
 
   .btn_empty_state {
     @extend %btn_medium;
-    background-color: $primary-light;
+    background-color: $gray-light;
 
     &_icon {
-      color: $primary;
+      color: $black;
 
       mat-icon {
         width: 1.125rem;
@@ -218,7 +218,7 @@
     }
 
     &_text {
-      color: $primary;
+      color: $black;
       font-size: 1rem;
       font-weight: 500;
     }
@@ -451,7 +451,7 @@
   }
 
   .btn_empty_state:hover {
-    background-color: $primary;
+    background-color: $gray;
 
     .btn_empty_state_text,
     .btn_empty_state_icon {

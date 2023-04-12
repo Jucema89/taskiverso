@@ -1,0 +1,42 @@
+@import  'variables';
+@import 'mixins';
+
+.list {
+    display: flex;
+    flex-direction: column;
+    background-color: #F1F1F1;
+    margin: 1rem;
+    max-width: 400px;
+    height: 100%;
+
+    &_title {
+        color: $black;
+        background-color: #DCDADA;
+        padding: 1rem 1.6rem;
+        border-radius: 1.25rem;
+        font-size: 1.25rem;
+        font-weight: 500;
+        margin: 0.5rem 1rem;
+    }
+
+    &_tasks {
+        display: flex;
+        flex-direction: column;
+        gap: .5rem;
+        padding: 1rem 1.25rem;
+        max-height: 450px;
+        overflow: scroll;
+        @include scroll-special(scroll, hidden, $primary);
+
+        &_button {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: nowrap;
+            align-content: center;
+        }
+    }
+
+    
+}

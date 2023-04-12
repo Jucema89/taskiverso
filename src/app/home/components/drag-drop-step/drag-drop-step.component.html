@@ -6,10 +6,10 @@
     [cdkDropListData]="list.tasks"
     (cdkDropListDropped)="drop($event)"
   >
-    <h3 class="list__title">
+    <h3 class="list_title">
       <strong>{{ list.name }}</strong>
     </h3>
-    <div class="list__tasks">
+    <div class="list_tasks">
       <app-drag-drop-card
         *ngFor="let task of list?.tasks"
         [task]="task"
@@ -17,9 +17,21 @@
         (editTask)="handleEdit(task)"
         cdkDrag
       ></app-drag-drop-card>
+
+      <div class="list_tasks_button">
+        <app-button
+          [icon]="'file-add'"
+          [text]="'New task'"
+          [class]="'btn_empty_state'">
+        </app-button>
+      </div>
+
     </div>
+
+    
   </div>
 </ng-container>
+
 <ng-template #empty>
     <p>
         No hay tareas

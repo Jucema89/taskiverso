@@ -1,0 +1,8 @@
+.grid {
+    display: grid;
+    grid-template-rows: 10% 0% 80% 10%;
+    align-content: stretch;
+    align-items: center;
+    justify-items: stretch;
+    height: 100vh;
+}

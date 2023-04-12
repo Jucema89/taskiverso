@@ -9,18 +9,18 @@ $breakpoints-up: ("medium": "40em", "large": "64em", "xlarge": "87.5em");
 $breakpoints-down: ("small": "39.9375", "medium": "63.9975em", "large": "87.4375em");
 
 @mixin breakpoint-up($size) {
-    @media (min-width: map-get($breakpoints-up, $size)){
-        @content;
-    }
+  @media (min-width: map-get($breakpoints-up, $size)){
+      @content;
+  }
 }
 
 @mixin breakpoint-down($size) {
-    @media (max-width: map-get($breakpoints-down, $size)) {
-        @content;
-    }
+  @media (max-width: map-get($breakpoints-down, $size)) {
+      @content;
+  }
 }
 
-@mixin scroll-renta($axisX, $axisY, $color) {
+@mixin scroll-special($axisX, $axisY, $color) {
   scroll-behavior:smooth;
   overflow-y: $axisX;
   overflow-x: $axisY;
@@ -49,7 +49,6 @@ $breakpoints-down: ("small": "39.9375", "medium": "63.9975em", "large": "87.4375
   }
 
 }
-
 
 @mixin scroller($axisX, $axisY, $color, $track_size) {
   scroll-behavior:smooth;
