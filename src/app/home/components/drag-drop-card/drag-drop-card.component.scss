@@ -57,6 +57,36 @@
 					width: auto
 					
 				}
+
+				&_count {
+					display: flex;
+					flex-direction: row;
+					align-content: center;
+					align-items: center;
+					flex-wrap: nowrap;
+					justify-content: space-between;
+					background-color: $gray-light;
+
+					mat-icon {
+						color: $black;
+						padding: 0.3rem;
+						border-radius: 0.5rem;
+						height: 1.2rem;
+						width: auto
+					}
+
+					span {
+						background-color: $white;
+						margin: 0 0.5rem;
+						color: $black;
+						font-weight: 700;
+						padding: 0.1rem 0.3rem;
+						border-radius: 1rem;
+						height: 1.2rem;
+						width: auto
+					}
+
+				}
 			}
 		}
 	}
@@ -64,7 +94,7 @@
 	&_buttons {
 		display: flex;
 		flex-direction: row;
-		justify-content: space-around;
+		justify-content: space-between;
 
 	}
 }

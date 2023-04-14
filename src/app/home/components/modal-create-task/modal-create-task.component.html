@@ -1,0 +1,68 @@
+<h2 mat-dialog-title> {{ this.data ? 'Update ' : 'Create ' }} Task</h2>
+<mat-dialog-content class="mat-typography">
+
+    <div class="modal_task" [formGroup]="form">
+
+        <div class="modal_task_grid">
+
+            <mat-form-field appearance="outline">
+                <mat-label>Name Task</mat-label>
+                <input matInput formControlName="name">
+                <!-- <mat-error *ngIf="this.form.get('name')?.errors">
+                    {{this.getErrorMessage('name')}}
+                </mat-error> -->
+                <app-control-error
+                [form]="this.form"
+                [control]="'name'">
+                </app-control-error>
+            </mat-form-field>
+
+
+            <mat-form-field appearance="outline">
+                <mat-label>Priority</mat-label>
+                <mat-select formControlName="priority">
+                    <mat-option *ngFor="let priority of priorityArray" 
+                        [value]="priority.value">
+                        {{priority.label}}
+                    </mat-option>
+                </mat-select>
+                <mat-error *ngIf="this.form.get('priority')?.errors">
+                    {{this.getErrorMessage('priority')}}
+                </mat-error>
+            </mat-form-field>
+
+            <mat-form-field appearance="outline">
+                <mat-label>Choose a date</mat-label>
+                <input matInput [matDatepicker]="picker" formControlName="date_limit">
+                <!-- <mat-hint>MM/DD/YYYY</mat-hint> -->
+                <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+                <mat-datepicker #picker></mat-datepicker>
+            </mat-form-field>
+
+            <mat-form-field appearance="outline">
+                <mat-label>Description</mat-label>
+                <textarea matInput formControlName="description"></textarea>
+            </mat-form-field>
+           
+        </div>
+
+    </div>  
+
+</mat-dialog-content>
+<mat-dialog-actions>
+
+    <app-button
+        [mat-dialog-close]="true" 
+        [text]="'Close'"
+        [class]="'btn_empty_state'">
+    </app-button>
+
+    <app-button
+        cdkFocusInitial
+        [disabling]="this.form.invalid"
+        [icon]="'file-check'"
+        [text]="'Create'"
+        [class]="'btn_success'">
+    </app-button>
+  <!-- <button mat-button  [mat-dialog-close]="true" cdkFocusInitial>Create</button> -->
+</mat-dialog-actions>

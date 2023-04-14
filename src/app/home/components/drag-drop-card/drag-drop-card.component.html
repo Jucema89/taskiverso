@@ -12,12 +12,17 @@
 
     <div class="task_header_icons">
       <div class="task_header_icons_buttons">
-        <mat-icon svgIcon="setting-menu-vertical">
+        <mat-icon svgIcon="user-add" matTooltip="assign">
         </mat-icon>
-        <mat-icon svgIcon="setting-menu-vertical">
-        </mat-icon>
-        <mat-icon svgIcon="setting-menu-vertical">
-        </mat-icon>
+
+        <div class="task_header_icons_buttons_count" 
+          matTooltip="subtask"*ngIf="task.subtask?.length">
+          <mat-icon svgIcon="interface-hierarchy">
+          </mat-icon>
+          <span>
+            {{task.subtask?.length}}
+          </span>
+        </div>
       </div>
     </div>
 

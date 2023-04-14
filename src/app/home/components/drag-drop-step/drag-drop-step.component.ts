@@ -1,6 +1,8 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 import {CdkDragDrop, moveItemInArray, transferArrayItem, CdkDropList} from '@angular/cdk/drag-drop';
 import { Step, Task } from '../models';
+import { MatDialog } from '@angular/material/dialog';
+import { ModalCreateTaskComponent } from '../modal-create-task/modal-create-task.component';
 
 @Component({
   selector: 'app-drag-drop-step',
@@ -16,7 +18,9 @@ export class DragDropStepComponent {
   @Input() list?: Step;
   @Output() editTask: EventEmitter<Task> = new EventEmitter();
 
-  constructor() {}
+  constructor(
+    public dialog: MatDialog
+  ) {}
 
   ngOnInit(): void {}
 
@@ -31,6 +35,18 @@ export class DragDropStepComponent {
         event.currentIndex
         );
     }
+  }
+
+  createTask(idList: string, task?: Task){
+
+    const dialogTask = this.dialog.open(ModalCreateTaskComponent, {
+      disableClose: true,
+    })
+
+    dialogTask.afterClosed().subscribe((task: Task) => {
+      
+    })
+
   }
 
   handleEdit(task: Task){
