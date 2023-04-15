@@ -1,5 +1,6 @@
 export const ICONS: string[] = [
     'add-step',
+    'interface-edit',
     'content-file',
     'dashboard-layout-circle',
     'favorite-heart',
@@ -16,6 +17,7 @@ export const ICONS: string[] = [
     'time-clock-circle',
     'file-sticky-note',
     'setting-menu-vertical',
+    'interface-hierarchy',
     'user-add',
     'setting-menu-alternate-1',
     'setting-menu-alternate-2'

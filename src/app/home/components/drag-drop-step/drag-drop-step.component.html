@@ -10,11 +10,13 @@
       <strong>{{ list.name }}</strong>
     </h3>
     <div class="list_tasks">
+      
       <app-drag-drop-card
         *ngFor="let task of list?.tasks"
         [task]="task"
         [list]="list"
         (editTask)="handleEdit(task)"
+        (taskAction$)="handleTaskCompleted($event)"
         cdkDrag
       ></app-drag-drop-card>
 
@@ -22,12 +24,12 @@
         <app-button
           [icon]="'file-add'"
           [text]="'New task'"
-          [class]="'btn_empty_state'">
+          [class]="'btn_empty_state'"
+          (clicker)="this.createTask(list.id)">
         </app-button>
       </div>
 
     </div>
-
     
   </div>
 </ng-container>

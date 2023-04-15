@@ -2,61 +2,23 @@
 
   <div class="sidenav_user">
 
-    <!-- <app-user-profile-button 
-    *ngIf="this.emailToProfile !== ''"
-      [name]="this.nameToProfile" 
-      [email]="this.emailToProfile"
-      [image]="this.imageToProfile">
-    </app-user-profile-button> -->
-
-    <app-button
-      [icon]="'file-check'"
-      [text]="'profile'"
-      [class]="'btn_success'">
-    </app-button>
+ 
 
   </div>
 
   <div class="sidenav_actions">
 
-    <!-- <app-button *ngFor="let option of menuOptions" [icon]="option.icon" [text]="option.label" [idButton]="option.label"
-      [clase]="'btn_basic_big'" (clicker)="this.goToRoute(option.route); this.closeSidenav()">
-    </app-button> -->
-
-    <app-button
-      [icon]="'file-check'"
-      [text]="'Finish'"
-      [class]="'btn_success'">
-    </app-button>
+ 
   </div>
 
   <div class="sidenav_support">
-    <div class="sidenav_support_title">
-      <p>Soporte</p>
-
-    </div>
-    <div class="sidenav_support_links">
-      <a (click)="this.dialogTicket()">Reporte de Errores</a>
-      <a (click)="this.closeSidenav()" [routerLink]="['settings','tutorials', '']">Tutoriales de
-        Uso</a>
-      <a class="indicators" [routerLink]="['settings','government-indicators']"
-        (click)="this.closeSidenav()">Indicadores Emitidos por el Gobierno</a>
-    </div>
+   
 
   </div>
 
   <div class="sidenav_footer">
     <div class="sidenav_footer_buttons">
 
-      <app-button
-      (clicker)="this.closeSidenav()">
-        cerrar
-      </app-button>
-
-      <app-button
-      (clicker)="this.logout()">
-        salir
-      </app-button>
     </div>
  
   </div>

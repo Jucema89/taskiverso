@@ -1,29 +1,52 @@
-<section class="task" *ngIf="task" id="task_{{task.id}}">
+<section class="task" 
+  *ngIf="!(this.task$ | async)?.finish" 
+  id="task_{{task?.id}}">
 
   <div class="task_header">
 
     <div class="task_header_title">
       <h2>
-        {{task.name}}
+        {{task?.name}}
       </h2>
-      <mat-icon svgIcon="setting-menu-vertical">
+      <mat-icon 
+        matRipple
+        svgIcon="setting-menu-vertical"
+        [matMenuTriggerFor]="menu">
       </mat-icon>
+
+      <mat-menu #menu="matMenu" xPosition="after">
+
+        <button mat-button matRipple color="warn" (click)="this.actionTask('remove')">
+          <mat-icon svgIcon="file-remove"></mat-icon>
+          <span>Remove</span>
+        </button>
+
+        <button mat-menu-item matRipple (click)="this.actionTask('edit')">
+          <mat-icon svgIcon="interface-edit"></mat-icon>
+          <span>Edit</span>
+        </button>
+
+      </mat-menu>
+
     </div>
 
     <div class="task_header_icons">
       <div class="task_header_icons_buttons">
-        <mat-icon svgIcon="setting-menu-vertical">
+        <mat-icon matRipple svgIcon="user-add" matTooltip="assign">
         </mat-icon>
-        <mat-icon svgIcon="setting-menu-vertical">
-        </mat-icon>
-        <mat-icon svgIcon="setting-menu-vertical">
-        </mat-icon>
+
+        <div class="task_header_icons_buttons_count" 
+          matTooltip="subtask"*ngIf="task?.subtask?.length">
+          <mat-icon svgIcon="interface-hierarchy">
+          </mat-icon>
+          <span>
+            {{task?.subtask?.length}}
+          </span>
+        </div>
       </div>
     </div>
 
   </div>
-
-  
 
   <div class="task_buttons">
 
@@ -36,6 +59,7 @@
     <app-button
       [icon]="'file-check'"
       [text]="'Finish'"
+      (clicker)="this.actionTask('completed')"
       [class]="'btn_success'">
     </app-button>
 

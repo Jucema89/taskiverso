@@ -62,12 +62,14 @@
         }
     
         &_icon {
-          padding: 0.5rem 0.7rem;
-          border-radius: 1rem;
-          background-color: $primary-light;
+            padding: 0.7rem;
+            display: flex;
+            border-radius: 1rem;
+            background-color: $primary;
+            align-items: center;
     
           mat-icon {
-            color: $primary;
+            color: $white;
             // width: auto;
             // height: auto;
           }

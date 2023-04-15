@@ -9,7 +9,11 @@ import { MatSelectModule } from '@angular/material/select';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material/core';
 import { MatDialogModule } from '@angular/material/dialog';
-import {MatSidenavModule} from '@angular/material/sidenav';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatTooltipModule } from '@angular/material/tooltip';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { MatRippleModule } from '@angular/material/core';
+import { MatMenuModule } from '@angular/material/menu';
 
 //CDK
 import { DragDropModule } from '@angular/cdk/drag-drop';
@@ -27,6 +31,7 @@ export const MATERIAL_ELEMENTS = [
         MatFormFieldModule,
         MatInputModule,
         MatSelectModule,
+        MatTooltipModule,
         MatDatepickerModule,
         MatNativeDateModule,
         DragDropModule,
@@ -34,5 +39,8 @@ export const MATERIAL_ELEMENTS = [
         TextFieldModule,
         MatDialogModule,
         PortalModule,
-        MatSidenavModule
+        MatSidenavModule,
+        MatSnackBarModule,
+        MatRippleModule,
+        MatMenuModule
 ]

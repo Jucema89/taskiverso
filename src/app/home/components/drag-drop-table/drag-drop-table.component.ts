@@ -3,6 +3,8 @@ import {CdkDragDrop, moveItemInArray, transferArrayItem, CdkDropList} from '@ang
 import { CdkConnectedOverlay, CdkOverlayOrigin, ConnectedPosition, FlexibleConnectedPositionStrategy, FlexibleConnectedPositionStrategyOrigin } from '@angular/cdk/overlay';
 import { Step, Task } from '../models';
 import { STEPS } from 'src/app/shared/services/fakeTask';
+import { TaskService } from 'src/app/shared/services/task/task.service';
+import { Observable, of } from 'rxjs';
 
 const initialValue: Task = {
   id: '',
@@ -23,7 +25,7 @@ type OverlayPartial = Omit<CdkConnectedOverlay, 'overlay' | 'dir' | 'overlayRef'
 })
 
 export class DragDropTableComponent implements OnInit {
-  lists: Step[];
+  lists$: Observable<Step[]> = of([]);
   task: Task;
   isOverlayDisplayed = false;
 
@@ -46,14 +48,13 @@ export class DragDropTableComponent implements OnInit {
 
   constructor(
     // private apiService: ApiService, 
-    // private taskService: TaskService
+  private taskService: TaskService
     ) {
     this.task = initialValue;
-    this.lists = [];
   }
 
   ngOnInit(): void {
-    this.lists = STEPS;
+    this.lists$ = this.taskService.getSteps();
     // this.getDataList();
     //this.getDataStored();
   }

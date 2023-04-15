@@ -40,36 +40,10 @@ export class MenuComponent implements OnInit {
   * String con url de imagen de perfil a mostrar
   */
   @Input() image: string = '';
-  /**
-   * Array con opciones de Botones especiales
-   */
-
-  /**
-   * Evento que emite acciones del menu para mobiles cuando este habnilitado
-   */
   @Output() menuMobile = new EventEmitter();
-
   @Output() sidenavProfile = new EventEmitter();
 
-  /**
-   * Vheigt o altura de pantalla/resolucion actual
-   */
-  public vHeight: number = 50;
 
-  public showMe: boolean = true;
-
-
-  /**
-   * Constructor
-   * 
-   * @param depService Informacion de Depuracion de renta
-   * @param store Conexion al store de la aplicacion
-   * @param notifyService Crea Notificaciones Toast
-   * @param planService Informacion del plan del usuariom actual
-   * @param router muestra ruta actual y permite disparar nuevas rutas
-   * @param dialog permite abrir dialogos y modales 
-   * @param document data recibida en formato document
-   */
   constructor(
     private matIconRegistry: MatIconRegistry,
     private router: Router,

@@ -22,7 +22,15 @@ export interface Task {
     finish: boolean
     date_limit: string
     subtask?: Task[]
+    assign?: User[]
 }
+
+export interface ActionTask {
+    taskId: string,
+    stepId: string
+    action: 'completed' | 'remove' | 'edit'
+}
+
 
 export interface User {
     id: string

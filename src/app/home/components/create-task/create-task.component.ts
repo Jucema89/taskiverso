@@ -46,6 +46,8 @@ export class CreateTaskComponent implements OnInit {
     //   this.selectedPriority = this.task.priority;
     // } else {
     //   this.formText = 'Crear';
+
+    console.log(this.connectedOverlay)
     // }
   }
 

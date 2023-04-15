@@ -7,5 +7,5 @@ export const COMPONENTS = [
     HeaderComponent,
     FooterComponent,
     ButtonComponent,
-    MenuUserComponent
+    MenuUserComponent,
 ]

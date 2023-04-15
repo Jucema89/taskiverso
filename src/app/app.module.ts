@@ -17,7 +17,6 @@ import { SharedModule } from './shared/shared.module';
     AppRoutingModule,
     NoopAnimationsModule,
     HttpClientModule,
-    ReactiveFormsModule,
     SharedModule
   ],
   providers: [],
