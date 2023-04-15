@@ -1,5 +1,7 @@
-import { Component, Input } from '@angular/core';
-import { Step, Task } from '../models';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { ActionTask, Step, Task } from '../models';
+import { OutletContext } from '@angular/router';
+import { Observable, of } from 'rxjs';
 
 @Component({
   selector: 'app-drag-drop-card',
@@ -8,8 +10,11 @@ import { Step, Task } from '../models';
 })
 export class DragDropCardComponent {
 
-  @Input() task?: Task;
-  @Input() list?: Step;
+  @Input() task: Task | null = null;
+  @Input() list: Step | null = null;
+  @Output() taskAction$: EventEmitter<ActionTask> = new EventEmitter()
+
+  task$: Observable<Task | null> = of(this.task)
 
   handleEditTask(task: Task){
     console.log('handleEditTask = ', task)
@@ -17,6 +22,21 @@ export class DragDropCardComponent {
 
   removeTask(id: string){
     console.log('removeTask = ', id)
+  }
+
+  actionTask(setAction: 'completed' | 'remove' | 'edit'){
+
+    if(this.task && this.list){
+
+      const action: ActionTask = {
+        stepId: this.list.id,
+        taskId: this.task.id,
+        action: setAction
+      }
+
+      this.taskAction$.emit(action)
+    }
+    
   }
   
 

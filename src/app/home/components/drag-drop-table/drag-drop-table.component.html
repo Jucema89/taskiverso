@@ -12,11 +12,11 @@
 
     <section class="table_list">
 
-        <app-drag-drop-step 
-            *ngFor="let list of lists" 
-            [list]="list" 
-            (editTask)="displayOverlay($event)">
-        </app-drag-drop-step>
+      <app-drag-drop-step 
+        *ngFor="let list of lists$ | async" 
+        [list]="list" 
+        (editTask)="displayOverlay($event)">
+      </app-drag-drop-step>
 
     </section>
 

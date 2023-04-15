@@ -77,7 +77,8 @@ import { AbstractControl, FormArray, FormControl, FormGroup, ValidationErrors } 
                         errorValue: controlErrors[keyError]
                     }
                 )
-            console.log('Key control: ' + key + ', keyError: ' + keyError + ', err value: ', controlErrors[keyError]);
+            // console.log('Key control: ' + key + ', keyError: ' + keyError + ', err value: ', controlErrors[keyError]);
+
             });
         }
 
@@ -104,7 +105,7 @@ import { AbstractControl, FormArray, FormControl, FormGroup, ValidationErrors } 
                         errorValue: controlErrors[keyError]
                     }
                 )
-            console.log('Key control: ' + key + ', keyError: ' + keyError + ', err value: ', controlErrors[keyError]);
+            // console.log('Key control: ' + key + ', keyError: ' + keyError + ', err value: ', controlErrors[keyError]);
             });
         }
 

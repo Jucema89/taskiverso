@@ -16,6 +16,7 @@
         [task]="task"
         [list]="list"
         (editTask)="handleEdit(task)"
+        (taskAction$)="handleTaskCompleted($event)"
         cdkDrag
       ></app-drag-drop-card>
 
@@ -29,7 +30,6 @@
       </div>
 
     </div>
-
     
   </div>
 </ng-container>

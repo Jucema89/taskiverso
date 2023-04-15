@@ -8,15 +8,10 @@
             <mat-form-field appearance="outline">
                 <mat-label>Name Task</mat-label>
                 <input matInput formControlName="name">
-                <!-- <mat-error *ngIf="this.form.get('name')?.errors">
-                    {{this.getErrorMessage('name')}}
-                </mat-error> -->
-                <app-control-error
-                [form]="this.form"
-                [control]="'name'">
-                </app-control-error>
+                <mat-error *ngIf="this.form.get('name')?.errors">
+                   {{ this.getErrorMessage('name')}}
+                </mat-error>
             </mat-form-field>
-
 
             <mat-form-field appearance="outline">
                 <mat-label>Priority</mat-label>
@@ -34,7 +29,7 @@
             <mat-form-field appearance="outline">
                 <mat-label>Choose a date</mat-label>
                 <input matInput [matDatepicker]="picker" formControlName="date_limit">
-                <!-- <mat-hint>MM/DD/YYYY</mat-hint> -->
+           
                 <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
                 <mat-datepicker #picker></mat-datepicker>
             </mat-form-field>
@@ -42,17 +37,18 @@
             <mat-form-field appearance="outline">
                 <mat-label>Description</mat-label>
                 <textarea matInput formControlName="description"></textarea>
+                <mat-error *ngIf="this.form.get('description')?.errors">
+                    {{this.getErrorMessage('description')}}
+                </mat-error>
             </mat-form-field>
-           
         </div>
-
     </div>  
-
 </mat-dialog-content>
+
 <mat-dialog-actions>
 
     <app-button
-        [mat-dialog-close]="true" 
+        (clicker)="this.close()"
         [text]="'Close'"
         [class]="'btn_empty_state'">
     </app-button>
@@ -60,9 +56,10 @@
     <app-button
         cdkFocusInitial
         [disabling]="this.form.invalid"
+        (clicker)="this.onSubmit()"
         [icon]="'file-check'"
-        [text]="'Create'"
+        [text]="this.data ? 'Update' : 'Create'"
         [class]="'btn_success'">
     </app-button>
-  <!-- <button mat-button  [mat-dialog-close]="true" cdkFocusInitial>Create</button> -->
+
 </mat-dialog-actions>

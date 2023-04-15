@@ -25,6 +25,13 @@ export interface Task {
     assign?: User[]
 }
 
+export interface ActionTask {
+    taskId: string,
+    stepId: string
+    action: 'completed' | 'remove' | 'edit'
+}
+
+
 export interface User {
     id: string
     name: string

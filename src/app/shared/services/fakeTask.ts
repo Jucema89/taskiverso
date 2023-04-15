@@ -1,4 +1,4 @@
-import { Step } from "src/app/home/components/models";
+import { Step, Task } from "src/app/home/components/models";
 
 export const STEPS: Step[] = [
     {
@@ -192,4 +192,6 @@ export const STEPS: Step[] = [
         },
       ],
     },
-  ]
+];
+
+export const TASK_FINISH: Task[] = []
