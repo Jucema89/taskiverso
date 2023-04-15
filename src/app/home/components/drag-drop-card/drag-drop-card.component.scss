@@ -98,3 +98,13 @@
 
 	}
 }
+
+.listSubtask {
+	display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    align-items: flex-end;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+	margin-top: .5rem;
+}

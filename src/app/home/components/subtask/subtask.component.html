@@ -1,0 +1,30 @@
+<section class="subtask">
+    <div class="subtask_row">
+
+        <mat-checkbox (change)="this.handleChecked($event)">
+            {{subtask?.name}}
+        </mat-checkbox>
+        
+        <mat-icon 
+            matRipple
+            svgIcon="setting-menu-vertical"
+            [matMenuTriggerFor]="menu">
+        </mat-icon>
+
+      <mat-menu #menu="matMenu" xPosition="after">
+
+        <button mat-button matRipple color="warn" (click)="handleChecked('')">
+          <mat-icon svgIcon="file-remove"></mat-icon>
+          <span>Remove</span>
+        </button>
+
+        <button mat-menu-item matRipple (click)="handleChecked('')">
+          <mat-icon svgIcon="interface-edit"></mat-icon>
+          <span>Edit</span>
+        </button>
+
+      </mat-menu>
+
+    </div>
+    
+</section> 

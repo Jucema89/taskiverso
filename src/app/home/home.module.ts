@@ -8,6 +8,7 @@ import { DragDropStepComponent } from './components/drag-drop-step/drag-drop-ste
 import { CreateTaskComponent } from './components/create-task/create-task.component';
 import { ModalCreateTaskComponent } from './components/modal-create-task/modal-create-task.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { SubtaskComponent } from './components/subtask/subtask.component';
 
 
 
@@ -17,7 +18,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     DragDropCardComponent,
     DragDropStepComponent,
     CreateTaskComponent,
-    ModalCreateTaskComponent
+    ModalCreateTaskComponent,
+    SubtaskComponent
   ],
   imports: [
     CommonModule,

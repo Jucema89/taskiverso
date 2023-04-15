@@ -66,3 +66,13 @@
   </div>
 
 </section>
+<ng-container *ngIf="task?.subtask?.length">
+
+  <section class="listSubtask">
+     <app-subtask
+      *ngFor="let subtask of task?.subtask" 
+      [subtask]="subtask">
+    </app-subtask>
+  </section>
+
+</ng-container>

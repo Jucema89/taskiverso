@@ -18,6 +18,7 @@ export const STEPS: Step[] = [
           subtask: [
             {
               id: 'subtask-1',
+              idTask: 'task-1',
               name: 'Subtask 1',
               description: 'Do this first',
               priority: 1,
@@ -26,6 +27,7 @@ export const STEPS: Step[] = [
             },
             {
               id: 'subtask-2',
+              idTask: 'task-1',
               name: 'Subtask 2',
               description: 'Do this next',
               priority: 2,
@@ -45,6 +47,7 @@ export const STEPS: Step[] = [
             {
               id: 'subtask-1',
               name: 'Subtask 1',
+              idTask: 'task-2',
               description: 'Do this first',
               priority: 1,
               finish: false,
@@ -52,6 +55,7 @@ export const STEPS: Step[] = [
             },
             {
               id: 'subtask-2',
+              idTask: 'task-2',
               name: 'Subtask 2',
               description: 'Do this next',
               priority: 2,
@@ -63,8 +67,8 @@ export const STEPS: Step[] = [
       ],
     },
     {
-      id: 'step-2',
-      name: 'Step 2',
+      id: 'step-3',
+      name: 'Step 3',
       description: 'This is the second step',
       icon: 'fa fa-cog',
       color: '#4caf50',
@@ -79,6 +83,7 @@ export const STEPS: Step[] = [
           subtask: [
             {
               id: 'subtask-1',
+              idTask: 'task-1',
               name: 'Subtask 1',
               description: 'Do this first',
               priority: 1,
@@ -87,6 +92,7 @@ export const STEPS: Step[] = [
             },
             {
               id: 'subtask-2',
+              idTask: 'task-1',
               name: 'Subtask 2',
               description: 'Do this next',
               priority: 2,
@@ -105,6 +111,7 @@ export const STEPS: Step[] = [
           subtask: [
             {
               id: 'subtask-1',
+              idTask: 'task-1',
               name: 'Subtask 1',
               description: 'Do this first',
               priority: 1,
@@ -113,6 +120,7 @@ export const STEPS: Step[] = [
             },
             {
               id: 'subtask-2',
+              idTask: 'task-1',
               name: 'Subtask 2',
               description: 'Do this next',
               priority: 2,
@@ -148,6 +156,7 @@ export const STEPS: Step[] = [
           subtask: [
             {
               id: 'subtask-1',
+              idTask: 'task-1',
               name: 'Subtask 1',
               description: 'Do this first',
               priority: 1,
@@ -156,6 +165,7 @@ export const STEPS: Step[] = [
             },
             {
               id: 'subtask-2',
+              idTask: 'task-1',
               name: 'Subtask 2',
               description: 'Do this next',
               priority: 2,
@@ -174,6 +184,7 @@ export const STEPS: Step[] = [
           subtask: [
             {
               id: 'subtask-1',
+              idTask: 'task-1',
               name: 'Subtask 1',
               description: 'Do this first',
               priority: 1,
@@ -182,6 +193,7 @@ export const STEPS: Step[] = [
             },
             {
               id: 'subtask-2',
+              idTask: 'task-1',
               name: 'Subtask 2',
               description: 'Do this next',
               priority: 2,
