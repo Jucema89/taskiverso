@@ -21,8 +21,8 @@ App task manager with CRUD Flow for managment task. App building in Angular Fram
 
 ### Get this Project in local:
 
-|Action           |Command     |
-|----------------|-------------------------------|---------------------|
-|Clone Repository |`git clone git@github.com:Jucema89/taskiverso.git`            |         
+|Action          |Command     |
+|----------------|------------|
+|Clone Repository |`git clone git@github.com:Jucema89/taskiverso.git`|         
 |Install          |`npm i`            |
 |Running         |`ng serve`|
