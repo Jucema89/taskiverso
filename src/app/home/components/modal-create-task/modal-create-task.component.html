@@ -59,7 +59,7 @@
         (clicker)="this.onSubmit()"
         [icon]="'file-check'"
         [text]="this.data ? 'Update' : 'Create'"
-        [class]="'btn_success'">
+        [class]="this.data ? 'btn_primary' : 'btn_success'">
     </app-button>
 
 </mat-dialog-actions>

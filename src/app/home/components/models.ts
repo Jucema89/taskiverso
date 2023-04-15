@@ -21,9 +21,21 @@ export interface Task {
     priority: number
     finish: boolean
     date_limit: string
-    subtask?: Task[]
+    subtask?: Substask[]
     assign?: User[]
 }
+
+export interface Substask {
+    id: string
+    idTask: string
+    name: string
+    description: string
+    priority: number
+    finish: boolean
+    date_limit: string
+    assign?: User[]
+}
+
 
 export interface ActionTask {
     taskId: string,

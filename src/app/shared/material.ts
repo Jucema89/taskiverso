@@ -14,6 +14,7 @@ import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { MatRippleModule } from '@angular/material/core';
 import { MatMenuModule } from '@angular/material/menu';
+import { MatCheckboxModule } from '@angular/material/checkbox';
 
 //CDK
 import { DragDropModule } from '@angular/cdk/drag-drop';
@@ -42,5 +43,6 @@ export const MATERIAL_ELEMENTS = [
         MatSidenavModule,
         MatSnackBarModule,
         MatRippleModule,
-        MatMenuModule
+        MatMenuModule,
+        MatCheckboxModule
 ]

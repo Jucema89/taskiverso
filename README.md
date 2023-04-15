@@ -1,27 +1,28 @@
-# JulioDaza
+## Taskiverso App
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.2.5.
+App task manager with CRUD Flow for managment task. App building in Angular Framework. 
 
-## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+### Functionalities
 
-## Code scaffolding
+- Creation and update of tasks through modal dialog
+- Drag and Drop system to change the status of the task
+- Toast notifications of actions with tasks
+  
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+### Assistive technology in use:
+- RxJs
+- Matrerial Angula: Dialogs, Cdk Drag and Drop, mat-Icons
+- Sass
 
-## Build
+![taskiverso image 1](https://i.ibb.co/GsBFZvd/Captura-de-pantalla-2023-04-15-172058.png)
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+![taskiverso image 2](https://i.ibb.co/Bq7Wp1K/Captura-de-pantalla-2023-04-15-172141.png)
 
-## Running unit tests
+### Get this Project in local:
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+|Action           |Command     |
+|----------------|-------------------------------|---------------------|
+|Clone Repository |`git clone git@github.com:Jucema89/taskiverso.git`            |         
+|Install          |`npm i`            |
+|Running         |`ng serve`|
